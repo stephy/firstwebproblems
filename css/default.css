@@ -3,3 +3,45 @@
 	CSS Style Sheet
 	by Stephani Alves & Kevin Deng
 */
+
+body{
+	background-color: #00A6E4;
+	color: #FFF;
+	font-family: arial;
+}
+
+#board{
+	border: 1px solid #fff;
+	height: 500px;
+	width: 500px;
+}
+.dragme{
+	position: absolute;
+	cursor: pointer;
+}
+
+
+#drag1{
+	z-index: 1;
+}
+
+#drag2{
+	z-index: 2;
+}
+
+#drag3{
+	z-index: 3;
+}
+
+#drag4{
+	z-index: 4;
+}
+
+#drag5{
+	z-index: 5;
+}
+
+#drag6{
+	z-index: 50;
+}
+

@@ -3,18 +3,25 @@
 <head>
 	<title>First Web Problems</title>
 	<link rel="stylesheet" href="css/default.css" type="text/css">
+
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script type="text/javascript" src="scripts/default.js"></script>
-	<script type="text/javascript" src="scripts/draganddrop.js"></script>
+	
 	<script type="text/javascript" src="scripts/eraser.js"></script>
 
 </head>
 <body>
 
-<div id="div1" ondrop="drop(event)"
-ondragover="allowDrop(event)"></div>
-
-<img id="drag1" src="img_logo.gif" draggable="true"
-ondragstart="drag(event)" width="336" height="69">
+<div>
+<img class="dragme" id="drag1" src="images/ie-aureula.png">
+<img class="dragme" id="drag2" src="images/ie-circle.png">
+<img class="dragme" id="drag3" src="images/ie-circle-blue.png">
+<img class="dragme" id="drag4" src="images/ie-e-middle-blue.png">
+<img class="dragme" id="drag5" src="images/ie-e-middle.png">
+<img class="dragme" id="drag6" src="images/ie-e-tail.png">
+</div>
+<script type="text/javascript" src="scripts/draganddrop.js"></script>
 
 </body>
 </html>
