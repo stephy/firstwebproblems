@@ -6,11 +6,50 @@
 
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
 	<script type="text/javascript" src="scripts/default.js"></script>
 	
 	<script type="text/javascript" src="scripts/eraser.js"></script>
 
+	<style type="text/css">
+
+	body {
+		background: black;
+	}
+
+	#testContainer {
+		position: fixed;
+		left: 50px;
+		top: 50px;
+		border: 1px solid black;
+		width: 600px;
+		height: 600px;
+		cursor: none;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: moz-none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	#testImage {
+		display: none;
+	}
+	</style>
+
 </head>
+
+	<script type="text/javascript">
+
+	$(function() {
+		new Eraser()
+		.loadImage($('#testImage'))
+		.appendTo($('#testContainer'))
+		.onComplete(function() { console.log("ERASED!!"); });
+	});
+	
+	</script>
 <body>
 
 <div>
@@ -22,6 +61,8 @@
 <img class="dragme" id="drag6" src="images/ie-e-tail.png">
 </div>
 <script type="text/javascript" src="scripts/draganddrop.js"></script>
+
+<div id="testContainer"><img id="testImage" src="ie7.png"/></div>
 
 </body>
 </html>
