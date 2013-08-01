@@ -111,7 +111,6 @@ $(".dragme").draggable({
 		updatePuzzle($(this).attr('id'), $(this).position().left, $(this).position().top);
 		var status = checkPuzzle();
 		console.log(status);
-
 	}
 });
 
