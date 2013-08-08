@@ -4,7 +4,7 @@
   by Stephani Alves & Kevin Deng
 */
 
-function Eraser() {
+function Eraser(size, featherSize) {
   this.handlers = {
     mouseup: this.mouseUpHandler,
     mousedown: this.mouseDownHandler,
@@ -12,6 +12,13 @@ function Eraser() {
     mouseenter: this.mouseEnterHandler,
     mouseleave: this.mouseLeaveHandler
   };
+
+  if (size > 0) {
+    this.eraserSize = size;
+  }
+  if (featherSize >= 0) {
+    this.featherSize = featherSize;
+  }
 }
 
 Eraser.prototype = {
@@ -22,6 +29,7 @@ Eraser.prototype = {
   ctx: null,
   isDragging: false,
   isHovering: false,
+  isCompleted: false,
   container: null,
   image: null,
   callback: null,
@@ -83,6 +91,10 @@ Eraser.prototype = {
   },
 
   checkComplete: function() {
+    if (this.isComplete) {
+      return;
+    }
+
     var data = this.ctx.getImageData(0, 0, this.canvasElement.width,
       this.canvasElement.height);
     var complete = true;
@@ -92,7 +104,9 @@ Eraser.prototype = {
         break;
       }
     }
+
     if (complete && this.callback) {
+      this.isComplete = true;
       this.callback();
     }
   },
