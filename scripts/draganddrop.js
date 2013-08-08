@@ -111,6 +111,37 @@ $(".dragme").draggable({
 		updatePuzzle($(this).attr('id'), $(this).position().left, $(this).position().top);
 		var status = checkPuzzle();
 		console.log(status);
+		if (status) {
+			$('#dialog1').dialog({
+				modal: true,
+	      buttons: {
+	        Ok: function() {
+	          $( this ).dialog( "close" );
+	        }
+	      }
+			});
+
+			var d = $(document.createElement('div'));
+			d.css({
+				position: 'absolute',
+				left: $('#drag1').css('left'),
+				top: $('#drag1').css('top'),
+				width: 433,
+				height: 433
+			});
+			$('#puzzle').append(d);
+
+			new Eraser(50, 50)
+			.loadImage($('#completedImage'))
+			.appendTo(d)
+			.onComplete(function() {
+				$('#dialog2').dialog({
+					modal: true
+				});
+			});
+
+			$('.dragme').hide();
+		}
 	}
 });
 

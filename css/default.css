@@ -70,6 +70,10 @@ p{
 	margin-right: 20px;
 }
 
+.template {
+	display: none;
+}
+
 .top-fp{
 	height: 20px;
 	background-color: #004296;
@@ -87,6 +91,11 @@ p{
 	height: 30px;
 	text-align: bottom
 	float: left;
+}
+
+.fp-image img {
+	width: 100%;
+	height: 100%;
 }
 
 .timer{
@@ -145,4 +154,28 @@ p{
 #f-5{
 	font-size: 75px;
 	color: #FFCD00;
+}
+
+#dialog2-bt {
+	width: 200px;
+	border-radius: 10px;
+	text-align: center;
+	padding: 15px;
+	background-color: blue;
+	border: 2px dashed #666;
+	cursor: pointer;
+}
+
+#dialog1, #dialog2 {
+	display: none;
+}
+
+.ui-dialog {
+	border: 1px solid black;
+	border-radius: 15px;
+	background: rgba(255, 255, 255, 0.6);
+}
+
+.ui-dialog-titlebar {
+	background: rgba(255, 255, 255, 0.9);
 }

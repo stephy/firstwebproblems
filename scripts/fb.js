@@ -22,7 +22,7 @@ $(function() {
   var fbRootRef = new Firebase('https://firstwebproblems.firebaseIO.com/');
   var scoreBoard = fbRootRef.child('scoreBoard');
 
-  $('#bt-add').click(function() {
+  $('#dialog2-bt').click(function() {
     FB.getLoginStatus(function(response) {
       if (response.status === 'connected') {
         $.get('https://graph.facebook.com/' + FB.getAuthResponse().userID, {
@@ -37,6 +37,11 @@ $(function() {
             }, new Date().getTime());
           }
         });
+
+        $('#dialog2').dialog('close');
+
+        $('html, body').animate({ scrollTop: $("#hall-of-fame").offset().top },
+          800);
       }
       else {
         FB.login();
@@ -61,7 +66,9 @@ $(function() {
     entry.find('.scoreboard-entry-text-name').text(data.name);
     entry.find('.scoreboard-entry-text-location').text(data.location);
     entry.find('.scoreboard-entry-text-score').text(data.score);
-    $('#container').append(entry);
+    $('#hall-of-fame').append(entry);
+    entry.css('opacity', 0);
+    entry.animate({ opacity: 1 }, 2500);
   });
 
   scoreBoard.on('child_removed', function(snapshot) {

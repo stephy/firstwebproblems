@@ -9,6 +9,8 @@
   	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script type="text/javascript" src="scripts/eraser.js"></script>
 	<script type="text/javascript" src="scripts/jstween.js"></script>
+	<script src='https://cdn.firebase.com/v0/firebase.js'></script>
+	<script type="text/javascript" src="scripts/fb.js"></script>
 
 	<style type="text/css">
 
@@ -46,6 +48,13 @@
 	
 	</script>
 <body>
+<img src="images/ie-logo.png" id="completedImage" style="display:none">
+<div id="dialog1" title="Well done!">Now let's solve the problem!</div>
+<div id="dialog2" title="Well done!">
+	<div id="dialog2-txt">Fantastic! You solved the problem!</div>
+	<div id="dialog2-bt">Enter the Hall of Fame</div>
+</div>
+
 <div class="section">
 	<div id="b-1" class="block">
 		
@@ -83,20 +92,22 @@
 	<script type="text/javascript" src="scripts/draganddrop.js"></script>
 </div><!--end of section -->
 
-<div class="section">
+<div class="section" id="hall-of-fame">
 	<div class="block"><img src="images/hall-of-fame.png" width="232"/></div><!--end of block -->
 
+	<div>
+		<button id="bt-remove">Take me off the list!!</button>
+	</div>
+
 	<br />
-	<div class="famous-people">
+	<div class="scoreboard-entry famous-people template">
 		<div class="top-fp"> Web Developer</div><!--end of top famous people -->
 		<div class="bottom-fp"> 
 			<div class="fp-image">
-
+				<img>
 			</div><!-- end of image -->
 
-			<span>Name</span> <br />
-				<span>Last Name</span>
-
+			<span class="scoreboard-entry-text-name">Name</span> <br />
 				
 			<div class="timer">
 				<p class="min">00'</p>
