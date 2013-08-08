@@ -8,6 +8,12 @@ $(function() {
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
     });
+
+    FB.Event.subscribe('auth.authResponseChange', function(response) {
+      if (response.status === 'connected') {
+        window.enterHallOfFame();
+      }
+    });
   };
 
   // Load the SDK asynchronously
@@ -22,7 +28,7 @@ $(function() {
   var fbRootRef = new Firebase('https://firstwebproblems.firebaseIO.com/');
   var scoreBoard = fbRootRef.child('scoreBoard');
 
-  $('#dialog2-bt').click(function() {
+  function enterHallOfFame() {
     FB.getLoginStatus(function(response) {
       if (response.status === 'connected') {
         $.get('https://graph.facebook.com/' + FB.getAuthResponse().userID, {
@@ -47,7 +53,10 @@ $(function() {
         FB.login();
       }
     });
-  });
+  }
+  window.enterHallOfFame = enterHallOfFame;
+
+  $('#dialog2-bt').click(enterHallOfFame);
 
   $('#bt-remove').click(function() {
     FB.getLoginStatus(function(response) {
