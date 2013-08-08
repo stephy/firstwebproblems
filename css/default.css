@@ -10,6 +10,10 @@ body{
 	font-family: arial;
 }
 
+.clear{
+	clear: both;
+}
+
 /* 
 	Dragging 
 */
@@ -56,6 +60,26 @@ p{
 	margin: 0;
 	padding:0;
 	line-height: 0.7em;
+}
+
+#anime{
+	height: 400px;
+}
+
+.lil-logo{
+	position: relative;
+}
+/*
+	Arrows
+*/
+
+.arrow-1{
+	position: relative;
+	margin-top: -100px;
+}
+.arrow-2{
+	float: right;
+	position: relative;
 }
 
 /* 
