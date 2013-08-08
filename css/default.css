@@ -10,6 +10,9 @@ body{
 	font-family: arial;
 }
 
+/* 
+	Dragging 
+*/
 #board{
 	border: 1px solid #fff;
 	height: 500px;
@@ -45,3 +48,101 @@ body{
 	z-index: 50;
 }
 
+
+/*
+
+*/
+p{
+	margin: 0;
+	padding:0;
+	line-height: 0.7em;
+}
+
+/* 
+	Hall of Fame
+*/
+
+.famous-people{
+	width:300px;
+	background-color: #003168;
+	color: #FFF;
+	height: 200px;
+	margin-right: 20px;
+}
+
+.top-fp{
+	height: 20px;
+	background-color: #004296;
+	padding: 10px;
+	color: #FFF;
+}
+
+.bottom-fp{
+	width: 250px;
+	margin: 0 auto;
+}
+
+.fp-image{
+	width: 30px;
+	height: 30px;
+	text-align: bottom
+	float: left;
+}
+
+.timer{
+	float: right;
+}
+
+
+/*
+	Sections Spacing
+*/
+#b-1{
+	float: right;
+	margin-top: 10%;
+	margin-right: 10%;
+}
+
+#b-2{
+	text-align: center;
+}
+/*
+	Fonts 
+*/
+
+.light{
+	font-family: 'Code-Pro-Light';
+}
+
+.bold{
+	font-family: 'Code-Pro-Bold';
+}
+
+.normal{
+	font-family: 'Code-Pro';
+}
+
+
+#f-1{
+	font-size: 310px;
+	color: #4BCDFF;
+}
+
+#f-2{
+	font-size: 230px;
+	color:#4BCDFF;
+}
+
+#f-3{
+	font-size: 98px;
+	color: #4BCDFF;
+}
+
+#f-4{
+	font-size: 54px;
+}
+
+#f-5{
+	font-size: 75px;
+	color: #FFCD00;
+}
