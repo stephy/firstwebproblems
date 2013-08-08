@@ -135,6 +135,7 @@ $(".dragme").draggable({
 			.loadImage($('#completedImage'))
 			.appendTo(d)
 			.onComplete(function() {
+				window.gameComplete = true;
 				$('#dialog2').dialog({
 					modal: true
 				});

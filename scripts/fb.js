@@ -10,7 +10,7 @@ $(function() {
     });
 
     FB.Event.subscribe('auth.authResponseChange', function(response) {
-      if (response.status === 'connected') {
+      if (response.status === 'connected' && window.gameComplete) {
         window.enterHallOfFame();
       }
     });
@@ -44,8 +44,6 @@ $(function() {
           }
         });
 
-        $('#dialog2').dialog('close');
-
         $('html, body').animate({ scrollTop: $("#hall-of-fame").offset().top },
           800);
       }
@@ -56,7 +54,10 @@ $(function() {
   }
   window.enterHallOfFame = enterHallOfFame;
 
-  $('#dialog2-bt').click(enterHallOfFame);
+  $('#dialog2-bt').click(function() {
+    window.enterHallOfFame();
+    $('#dialog2').dialog('close');
+  });
 
   $('#bt-remove').click(function() {
     FB.getLoginStatus(function(response) {
