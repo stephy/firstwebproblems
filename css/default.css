@@ -5,6 +5,7 @@
 */
 
 body{
+	background-image: url(../images/bg.jpg);
 	background-color: #00A6E4;
 	color: #FFF;
 	font-family: arial;
@@ -67,7 +68,21 @@ p{
 }
 
 .lil-logo{
+	background-image: url(../images/fwp.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 	position: relative;
+	width: 200px;
+	height: 200px;
+}
+
+.intro-logo{
+	background-image: url(../images/fwp.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 400px;
+	height: 400px;
 }
 /*
 	Arrows
@@ -76,6 +91,7 @@ p{
 .arrow-1{
 	position: relative;
 	margin-top: -100px;
+	display: none;
 }
 .arrow-2{
 	float: right;
@@ -202,4 +218,19 @@ p{
 
 .ui-dialog-titlebar {
 	background: rgba(255, 255, 255, 0.9);
+}
+
+#stopwatch{
+	position: absolute;
+	right: 0;
+	margin-right: 30px;
+}
+
+input{
+	background: transparent;
+	border:0;
+	font-family: 'Code-Pro-Bold';
+	color: #7cd8fe;
+	font-size: 92px;
+	height: 100px!important;
 }

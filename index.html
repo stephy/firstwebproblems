@@ -47,6 +47,7 @@
 	});
 	
 	</script>
+
 <body>
 <img src="images/ie-logo.png" id="completedImage" style="display:none">
 <div id="dialog1" title="Well done!">Now let's solve the problem!</div>
@@ -57,11 +58,7 @@
 
 <div class="section">
 	<div id="b-1" class="block">
-		
-			<p id="f-1" class="bold">1st</p>
-			<p id="f-2" class="bold">Web</p>
-			<p id="f-3" class="bold"> Problems</p>
-		</p>
+		<div class="intro-logo"></div>
 	</div><!--end of block -->
 
 	<div class="clear"> </div>
@@ -73,12 +70,11 @@
 <div class="section">
 	<div id="b-2" class="block">
 		<p id="f-4" class="light"> If you are a true web developer</p><br/>
-		<p id="f-5" class="normal"> you <span style="color:#FFFF00"> can </span> help us solve</p><br/>
+		<p id="f-5" class="normal"> you <span style="color:#FFFF00"> can </span> help us solve
+		<br/><br/><br/>
+		<p id="f-1" class="light"> First Web Problems</p><br/>
+		</p>
 	</div><!--end of block -->
-
-	<div id="anime">
-		<div class="lil-logo"><img src="images/little-logo.png" /></div>
-	</div><!-- end of animation -->
 
 	<div class="clear"> </div>
 	<div class="arrow-2"><img src="images/scroll-down-1.png" width="150"/></div>
@@ -87,7 +83,24 @@
 
 
 <div class="section">
-	<div class="block"><img src="images/here-is-the-problem.png" width="426"/></div><!--end of block -->
+	<div id="stopwatch">
+		
+			<form name="clockform">
+				
+			<input name="clock" id="clock" style="font-size: 24; font-weight: bold; height: 35px; text-align: center; width: 500px;" value="00:00:00.00" />
+			<!--<input name="starter" onclick="findTIME()" style="font-weight: bold; width: 97px;" type="button" value="Start/Stop" />
+			<input name="clearer" onclick="clearALL()" type="button" value="Reset" /> -->
+
+			</form>
+		</div><!--end of stopwatch -->
+
+	<div class="block">
+		<img src="images/here-is-the-problem.png" width="426"/>
+
+		
+		<script type="text/javascript" src="scripts/stopwatch.js"></script>
+		<div> <span id="mins"></span><span id="secs"></span> <span id="milsecs"></span></div>
+	</div><!--end of block -->
 
 	<div id="puzzle" class="block">
 		<img class="dragme" id="drag1" src="images/ie-aureula.png">
